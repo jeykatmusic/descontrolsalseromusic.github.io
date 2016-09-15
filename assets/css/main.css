@@ -285,7 +285,7 @@
 		}
 	}
 
-/* Type FUENTE Times Nes Roman */
+/* Type FUENTE Times New Roman */
 
 	body, input, select, textarea {
 		color: #000000;
@@ -380,9 +380,9 @@
 
 /* GROSOR DEL TITULO DE LA PAGINA VESNESTI MUSIC*/
 
-		font-weight: 700;
-		line-height: 1em;
-		margin: 0 0 1em 1;
+		font-weight: 600;
+		line-height: 0em;
+		margin: 0 0 0em 0;
 	}
 
 /* FUENTE Y SUS CARACTERISTICAS POR DEFECTO*/
@@ -1025,14 +1025,14 @@
 
 /* TAMAÑO DEL TITULO - NELSON ANDRADE */
 	#header h1 {
-		font-size: 3.1em;
+		font-size: 2.6em;
 
 /* SUBIR TITULO - NELSON ANDRADE O QUIZAS EL CUADRO CON TEXTO */
 		margin: 0 0 0.55em 0;
 	}
 
 	#header p {
-		font-size: 1.35em;
+		font-size: 1.25em;
 		line-height: 1.65em;
 	}
 /* TAMAÑO DEL COLOR DE LOS ICONOS YouTube - linkedin - Prensa */
@@ -1040,10 +1040,14 @@
 		color: black;
 	}
 
-	@media screen and (max-width: 736px) {
+/* TAMAÑO DEL TITULO SOBRE LA PANTALLA PC POR DEFECTO 736 */
+
+	@media screen and (max-width: 480px) {
+
+/* TAMAÑO DEL TITULO SOBRE LA PANTALLA MOVIL POR DEFECTO */
 
 		#header h1 {
-			font-size: 1em;
+			font-size: 1.4em;
 		}
 
 		#header p {
