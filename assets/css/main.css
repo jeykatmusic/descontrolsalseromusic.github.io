@@ -292,8 +292,9 @@
 		/* si pongo de fuente italic O Times New Roman me cambia todo */
 
 		font-family: 'Lato', sans-serif;
-		font-size: 13pt;
+		font-size: 11pt;
 		font-weight: 500;
+
 /* ESPACIO entre caracteres del texto -Como empresario...- */
 		letter-spacing: -0.03em;
 		line-height: 0.55em;
@@ -393,8 +394,8 @@
 		}
 
 	h1 {
-		font-size: 2.5em;
-		line-height: 0.13em;
+		font-size: 1.5em;
+		line-height: 0.15em;
 	}
 
 	h2 {
@@ -447,7 +448,7 @@
 		background: #ffffff;
 		border-radius: 6px;
 		border: solid 2px rgba(255, 255, 255, 0.35);
-		font-family: "Courier New", monospace;
+		font-family: 'Lato', sans-serif;
 		font-size: 0.9em;
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
@@ -496,7 +497,7 @@
 	}
 
 	header h3 + p {
-		font-size: 1.1em;
+		font-size: 1.5em;
 		margin-top: -0.8em;
 		line-height: 1.5em;
 	}
@@ -1028,12 +1029,12 @@
 		font-size: 2.5em;
 
 /* SUBIR TITULO - NELSON ANDRADE O QUIZAS EL CUADRO CON TEXTO */
-		margin: 0 0 0.55em 0;
+		margin: 0 0 0.65em 0;
 	}
 
 	#header p {
-		font-size: 1.25em;
-		line-height: 1.65em;
+		font-size: 1.35em;
+		line-height: 1.55em;
 	}
 /* TAMAÑO DEL COLOR DE LOS ICONOS YouTube - linkedin - Prensa */
 	#header a {
