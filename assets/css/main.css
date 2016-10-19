@@ -2,6 +2,7 @@
 @import url("http://fonts.googleapis.com/css?family=Roboto:400,700");
 
 
+
 /* Reset */
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -99,7 +100,7 @@
 		justify-content: center;
 
 /* FILTRO que cubre el fondo de la pagina */
-		background-color: rgba(255, 255, 255, 0.93);
+		background-color: rgba(255, 255, 255, 0);
 		padding: 6em 4em 4em 4em;
 	}
 
@@ -292,10 +293,9 @@
 		/* si pongo de fuente italic O Times New Roman me cambia todo */
 
 		font-family: 'Lato', sans-serif;
-		font-size: 11pt;
-		font-weight: 500;
-
-/* ESPACIO entre caracteres del texto -Como empresario...- */
+		font-size: 13pt;
+		font-weight: 400;
+/* ESPACIO entre caracteres del texto -Como artista...- */
 		letter-spacing: -0.03em;
 		line-height: 0.55em;
 	}
@@ -303,7 +303,7 @@
 		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
-/* TAMAÑO de la fuente del texto - Como empresario...- */
+/* TAMAÑO de la fuente del texto - Como artista...- */
 				font-size: 13pt;
 			}
 
@@ -381,7 +381,7 @@
 
 /* GROSOR DEL TITULO DE LA PAGINA VESNESTI MUSIC*/
 
-		font-weight: 600;
+		font-weight: 580;
 		line-height: 0em;
 		margin: 0 0 0em 0;
 	}
@@ -394,8 +394,8 @@
 		}
 
 	h1 {
-		font-size: 1.5em;
-		line-height: 0.15em;
+		font-size: 2.5em;
+		line-height: 0.13em;
 	}
 
 	h2 {
@@ -404,7 +404,7 @@
 	}
 
 	h3 {
-		font-size: 0.35em;
+		font-size: 1.35em;
 		line-height: 0.5em;
 	}
 
@@ -483,7 +483,7 @@
 	section.special, article.special {
 		text-align: center;
 	}
-/* CAMBIA EL COLOR DEL TEXTO SOY VENESTI, COMO ARTISTA ... */
+/* CAMBIA EL COLOR DEL TEXTO como artista ... */
 	header p {
 		color: rgba(0, 0, 0, 0.65);
 		position: relative;
@@ -497,7 +497,7 @@
 	}
 
 	header h3 + p {
-		font-size: 1.5em;
+		font-size: 1.1em;
 		margin-top: -0.8em;
 		line-height: 1.5em;
 	}
@@ -545,7 +545,8 @@
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
+/* nos afecta los iconos de las RSSS */
+			font-family:
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -624,7 +625,7 @@
 			form .message:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
+				font-family: 'Lato', sans-serif;
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
@@ -883,7 +884,7 @@
 			input[type="radio"] + label:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
+				font-family: 'Lato', sans-serif;
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
@@ -1026,15 +1027,15 @@
 
 /* TAMAÑO DEL TITULO - NELSON ANDRADE */
 	#header h1 {
-		font-size: 2.5em;
+		font-size: 2.6em;
 
 /* SUBIR TITULO - NELSON ANDRADE O QUIZAS EL CUADRO CON TEXTO */
-		margin: 0 0 0.65em 0;
+		margin: 0 0 0.55em 0;
 	}
 
 	#header p {
-		font-size: 1.35em;
-		line-height: 1.55em;
+		font-size: 1.25em;
+		line-height: 1.65em;
 	}
 /* TAMAÑO DEL COLOR DE LOS ICONOS YouTube - linkedin - Prensa */
 	#header a {
