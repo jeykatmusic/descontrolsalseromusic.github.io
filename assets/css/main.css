@@ -348,17 +348,17 @@
 		transition: border-bottom-color 0.2s ease, color 0.2s ease;
 
 /* COLOR DEL BORDE DE LOS BOTONES DE CREDITS AVISO LEGAL */
-		border-bottom: dotted 1px #b31217;
+		border-bottom: dotted 1px rgba(255, 255, 255, 0.0);
 
 /* COLOR DE LOS BOTONES DE CREDITS AVISO LEGAL*/
-		color: #b31217;
+		color: #3b5998;
 		text-decoration: none;
 	}
 		a:hover {
 			border-bottom-color: transparent;
 
 /* COLOR DE LOS BOTONES DE LAS REDES ESPECIFICASL*/
-			color: #b31217 !important;
+			color: #3b5998 !important;
 			text-decoration: none;
 		}
 
@@ -1039,7 +1039,7 @@
 	}
 /* TAMAÑO DEL COLOR DE LOS ICONOS YouTube - linkedin - Prensa */
 	#header a {
-		color: black;
+		color: #3b5998;
 	}
 
 /* TAMAÑO DEL TITULO SOBRE LA PANTALLA PC POR DEFECTO 736 */
@@ -1162,7 +1162,7 @@
 				}
 
 			#footer .copyright a {
-				color: black;
+				color: #3b5998;
 			}
 
 		#footer:hover {
