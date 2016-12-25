@@ -1,8 +1,6 @@
 @import url(font-awesome.min.css);
 @import url("http://fonts.googleapis.com/css?family=Roboto:400,700");
 
-
-
 /* Reset */
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -100,13 +98,13 @@
 		justify-content: center;
 
 /* FILTRO que cubre el fondo de la pagina */
-        background-color: #7c7c7c;
+        background-color: rgba(47, 47, 47, 0.88);
         padding: 6em 4em 4em 4em;
 	}
 
 		body > * {
 			position: relative;
-			z-index: 6;
+			z-index: 2;
 		}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -144,7 +142,7 @@
 
 		}
 
-/* BG aquí efectos de las imagenes de fondo */
+/* BG aquí efectos de las imagenes de fondo SE CONTROLA LA OPACIDAD DEL FONDO */
 
 	#bg {
 		-moz-transition: opacity 2s ease-in-out;
@@ -153,7 +151,7 @@
 		transition: opacity 2s ease-in-out;
 		height: 100%;
 		left: 0;
-		opacity: 0.25;
+		opacity: 0.80;
 		position: fixed;
 		top: 0;
 		width: 100%;
@@ -545,6 +543,7 @@
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
+
 /* nos afecta los iconos de las RSSS */
 			font-family:
 			font-style: normal;
@@ -561,7 +560,7 @@
 	ol {
 		list-style: decimal;
 		margin: 0 0 2em 0;
-		padding-left: 1.25em;
+		padding-left: 0.25em;
 	}
 
 		ol li {
@@ -1037,7 +1036,7 @@
 		font-size: 1.25em;
 		line-height: 1.65em;
 	}
-/* TAMAÑO DEL COLOR DE LOS ICONOS YouTube - linkedin - Prensa */
+/* COLOR DE LOS ICONOS YouTube - linkedin - Prensa */
 	#header a {
 		color: #3b5998;
 	}
@@ -1128,8 +1127,8 @@
 		-webkit-transition: opacity 0.5s ease-in-out;
 		-ms-transition: opacity 0.5s ease-in-out;
 		transition: opacity 0.5s ease-in-out;
-		bottom: 4em;
-		color: rgba(0, 0, 0, 0.88);
+		bottom: 2em;
+		color: rgba(255, 255, 255, 0.88);
 		left: 4em;
 		opacity: 0.5;
 		position: absolute;
@@ -1150,7 +1149,7 @@
 /*COLOR Y TAMAÑO DE LA | QUE DIVIDE CREDITOS CON AVISO LEGAL*/
 				border-left: solid 1px #000000;
 				display: inline-block;
-				line-height: .5em;
+				line-height: .2em;
 				margin: 0 0 0 .2em;
 				padding: 0 0 0 .2em;
 			}
@@ -1166,7 +1165,7 @@
 			}
 
 		#footer:hover {
-			opacity: 1;
+			opacity: 1
 		}
 
 		#footer > :last-child {
