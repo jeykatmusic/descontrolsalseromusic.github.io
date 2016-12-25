@@ -364,7 +364,7 @@
 
 	strong, b {
 		color: #000000;
-		font-weight: 700;
+		font-weight: 100;
 	}
 
 	em, i {
@@ -399,8 +399,8 @@
 	}
 
 	h2 {
-		font-size: 1.75em;
-		line-height: 1.7em;
+		font-size: 0.75em;
+		line-height: 0.7em;
 	}
 
 	h3 {
