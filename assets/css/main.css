@@ -1127,9 +1127,9 @@
 		-webkit-transition: opacity 0.5s ease-in-out;
 		-ms-transition: opacity 0.5s ease-in-out;
 		transition: opacity 0.5s ease-in-out;
-		bottom: 2em;
+		bottom: 5em;
 		color: rgba(255, 255, 255, 0.88);
-		left: 4em;
+		left: 1em;
 		opacity: 0.5;
 		position: absolute;
 	}
@@ -1147,9 +1147,9 @@
 			#footer .copyright li {
 
 /*COLOR Y TAMAÑO DE LA | QUE DIVIDE CREDITOS CON AVISO LEGAL*/
-				border-left: solid 1px #000000;
+				border-left: solid 0,1px #000000;
 				display: inline-block;
-				line-height: .2em;
+				line-height: 1.2em;
 				margin: 0 0 0 .2em;
 				padding: 0 0 0 .2em;
 			}
@@ -1169,7 +1169,7 @@
 		}
 
 		#footer > :last-child {
-			margin-bottom: 0;
+			margin-bottom: 1;
 		}
 /*MOVEMOS TODA LA ZONA DE REDES ESPECIFICAS Y CREDITS Y AVISO LEGAL*/
 
@@ -1205,7 +1205,7 @@
 			#footer {
 				bottom: auto;
 				left: auto;
-				margin: 2em 0 0 0;
+				margin: 3em 0 0 0;
 				position: relative;
 			}
 
