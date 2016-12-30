@@ -1,174 +1,299 @@
 /*
-	Artistas by NELSON ANDRADE TM
+	VENESTIMUSIC by @nelsonandrade.co
 	nelsonandrade.co | @nelsonandradeit
 	Free for personal and commercial use under the CCA 3.0 license (nelsonandrade.co/license)
 */
 
-(function() {
+(function($) {
 
-	"use strict";
+	skel.breakpoints({
+		xlarge: '(max-width: 1680px)',
+		large: '(max-width: 1280px)',
+		medium: '(max-width: 980px)',
+		small: '(max-width: 736px)',
+		xsmall: '(max-width: 480px)'
+	});
 
-	// Methods/polyfills.
+	$(function() {
 
-		// classList | (c) @remy | github.com/remy/polyfills | rem.mit-license.org
-			!function(){function t(t){this.el=t;for(var n=t.className.replace(/^\s+|\s+$/g,"").split(/\s+/),i=0;i<n.length;i++)e.call(this,n[i])}function n(t,n,i){Object.defineProperty?Object.defineProperty(t,n,{get:i}):t.__defineGetter__(n,i)}if(!("undefined"==typeof window.Element||"classList"in document.documentElement)){var i=Array.prototype,e=i.push,s=i.splice,o=i.join;t.prototype={add:function(t){this.contains(t)||(e.call(this,t),this.el.className=this.toString())},contains:function(t){return-1!=this.el.className.indexOf(t)},item:function(t){return this[t]||null},remove:function(t){if(this.contains(t)){for(var n=0;n<this.length&&this[n]!=t;n++);s.call(this,n,1),this.el.className=this.toString()}},toString:function(){return o.call(this," ")},toggle:function(t){return this.contains(t)?this.remove(t):this.add(t),this.contains(t)}},window.DOMTokenList=t,n(Element.prototype,"classList",function(){return new t(this)})}}();
+		var	$window = $(window),
+			$body = $('body'),
+			$wrapper = $('#wrapper');
 
-		// canUse
-			window.canUse=function(p){if(!window._canUse)window._canUse=document.createElement("div");var e=window._canUse.style,up=p.charAt(0).toUpperCase()+p.slice(1);return p in e||"Moz"+up in e||"Webkit"+up in e||"O"+up in e||"ms"+up in e};
+		// Hack: Enable IE workarounds.
+			if (skel.vars.IEVersion < 12)
+				$body.addClass('ie');
 
-		// window.addEventListener
-			(function(){if("addEventListener"in window)return;window.addEventListener=function(type,f){window.attachEvent("on"+type,f)}})();
+		// Touch?
+			if (skel.vars.mobile)
+				$body.addClass('touch');
 
-	// Vars.
-		var	$body = document.querySelector('body');
+		// Transitions supported?
+			if (skel.canUse('transition')) {
 
-	// Disable animations/transitions until everything's loaded.
-		$body.classList.add('is-loading');
+				// Add (and later, on load, remove) "loading" class.
+					$body.addClass('loading');
 
-		window.addEventListener('load', function() {
-			window.setTimeout(function() {
-				$body.classList.remove('is-loading');
-			}, 100);
-		});
-
-	// Slideshow Background.
-		(function() {
-
-			// Settings.
-				var settings = {
-
-					// Images (in the format of 'url': 'alignment').
-						images: {
-							'images/bg04.jpg': 'center',
-							'images/bg05.jpg': 'center',
-							'images/bg06.jpg': 'center'
-						},
-
-					// Delay.
-						delay: 6000
-
-				};
-
-			// Vars.
-				var	pos = 0, lastPos = 0,
-					$wrapper, $bgs = [], $bg,
-					k, v;
-
-			// Create BG wrapper, BGs.
-				$wrapper = document.createElement('div');
-					$wrapper.id = 'bg';
-					$body.appendChild($wrapper);
-
-				for (k in settings.images) {
-
-					// Create BG.
-						$bg = document.createElement('div');
-							$bg.style.backgroundImage = 'url("' + k + '")';
-							$bg.style.backgroundPosition = settings.images[k];
-							$wrapper.appendChild($bg);
-
-					// Add it to array.
-						$bgs.push($bg);
-
-				}
-
-			// Main loop.
-				$bgs[pos].classList.add('visible');
-				$bgs[pos].classList.add('top');
-
-				// Bail if we only have a single BG or the client doesn't support transitions.
-					if ($bgs.length == 1
-					||	!canUse('transition'))
-						return;
-
-				window.setInterval(function() {
-
-					lastPos = pos;
-					pos++;
-
-					// Wrap to beginning if necessary.
-						if (pos >= $bgs.length)
-							pos = 0;
-
-					// Swap top images.
-						$bgs[lastPos].classList.remove('top');
-						$bgs[pos].classList.add('visible');
-						$bgs[pos].classList.add('top');
-
-					// Hide last image after a short delay.
+					$window.on('load', function() {
 						window.setTimeout(function() {
-							$bgs[lastPos].classList.remove('visible');
-						}, settings.delay / 2);
+							$body.removeClass('loading');
+						}, 100);
+					});
 
-				}, settings.delay);
+				// Prevent transitions/animations on resize.
+					var resizeTimeout;
 
-		})();
+					$window.on('resize', function() {
 
-	// Signup Form.
-		(function() {
+						window.clearTimeout(resizeTimeout);
 
-			// Vars.
-				var $form = document.querySelectorAll('#signup-form')[0],
-					$submit = document.querySelectorAll('#signup-form input[type="submit"]')[0],
-					$message;
+						$body.addClass('resizing');
 
-			// Bail if addEventListener isn't supported.
-				if (!('addEventListener' in $form))
-					return;
+						resizeTimeout = window.setTimeout(function() {
+							$body.removeClass('resizing');
+						}, 100);
 
-			// Message.
-				$message = document.createElement('span');
-					$message.classList.add('message');
-					$form.appendChild($message);
+					});
 
-				$message._show = function(type, text) {
+			}
 
-					$message.innerHTML = text;
-					$message.classList.add(type);
-					$message.classList.add('visible');
+		// Scroll back to top.
+			$window.scrollTop(0);
 
-					window.setTimeout(function() {
-						$message._hide();
-					}, 3000);
+		// Fix: Placeholder polyfill.
+			$('form').placeholder();
 
-				};
+		// Panels.
+			var $panels = $('.panel');
 
-				$message._hide = function() {
-					$message.classList.remove('visible');
-				};
+			$panels.each(function() {
 
-			// Events.
-			// Note: If you're *not* using AJAX, get rid of this event listener.
-				$form.addEventListener('submit', function(event) {
+				var $this = $(this),
+					$toggles = $('[href="#' + $this.attr('id') + '"]'),
+					$closer = $('<div class="closer" />').appendTo($this);
 
-					event.stopPropagation();
-					event.preventDefault();
+				// Closer.
+					$closer
+						.on('click', function(event) {
+							$this.trigger('---hide');
+						});
 
-					// Hide message.
-						$message._hide();
+				// Events.
+					$this
+						.on('click', function(event) {
+							event.stopPropagation();
+						})
+						.on('---toggle', function() {
 
-					// Disable submit.
-						$submit.disabled = true;
+							if ($this.hasClass('active'))
+								$this.triggerHandler('---hide');
+							else
+								$this.triggerHandler('---show');
 
-					// Process form.
-					// Note: Doesn't actually do anything yet (other than report back with a "thank you"),
-					// but there's enough here to piece together a working AJAX submission call that does.
-						window.setTimeout(function() {
+						})
+						.on('---show', function() {
 
-							// Reset form.
-								$form.reset();
+							// Hide other content.
+								if ($body.hasClass('content-active'))
+									$panels.trigger('---hide');
 
-							// Enable submit.
-								$submit.disabled = false;
+							// Activate content, toggles.
+								$this.addClass('active');
+								$toggles.addClass('active');
 
-							// Show message.
-								$message._show('success', 'Thank you!');
-								//$message._show('failure', 'Something went wrong. Please try again.');
+							// Activate body.
+								$body.addClass('content-active');
 
-						}, 750);
+						})
+						.on('---hide', function() {
+
+							// Deactivate content, toggles.
+								$this.removeClass('active');
+								$toggles.removeClass('active');
+
+							// Deactivate body.
+								$body.removeClass('content-active');
+
+						});
+
+				// Toggles.
+					$toggles
+						.removeAttr('href')
+						.css('cursor', 'pointer')
+						.on('click', function(event) {
+
+							event.preventDefault();
+							event.stopPropagation();
+
+							$this.trigger('---toggle');
+
+						});
+
+			});
+
+			// Global events.
+				$body
+					.on('click', function(event) {
+
+						if ($body.hasClass('content-active')) {
+
+							event.preventDefault();
+							event.stopPropagation();
+
+							$panels.trigger('---hide');
+
+						}
+
+					});
+
+				$window
+					.on('keyup', function(event) {
+
+						if (event.keyCode == 27
+						&&	$body.hasClass('content-active')) {
+
+							event.preventDefault();
+							event.stopPropagation();
+
+							$panels.trigger('---hide');
+
+						}
+
+					});
+
+		// Header.
+			var $header = $('#header');
+
+			// Links.
+				$header.find('a').each(function() {
+
+					var $this = $(this),
+						href = $this.attr('href');
+
+					// Internal link? Skip.
+						if (!href
+						||	href.charAt(0) == '#')
+							return;
+
+					// Redirect on click.
+						$this
+							.removeAttr('href')
+							.css('cursor', 'pointer')
+							.on('click', function(event) {
+
+								event.preventDefault();
+								event.stopPropagation();
+
+								window.location.href = href;
+
+							});
 
 				});
 
-		})();
+		// Footer.
+			var $footer = $('#footer');
 
-})();
+			// Copyright.
+			// This basically just moves the copyright line to the end of the *last* sibling of its current parent
+			// when the "medium" breakpoint activates, and moves it back when it deactivates.
+				$footer.find('.copyright').each(function() {
+
+					var $this = $(this),
+						$parent = $this.parent(),
+						$lastParent = $parent.parent().children().last();
+
+					skel
+						.on('+medium', function() {
+							$this.appendTo($lastParent);
+						})
+						.on('-medium', function() {
+							$this.appendTo($parent);
+						});
+
+				});
+
+		// Main.
+			var $main = $('#main');
+
+			// Thumbs - voy a cambiar todo los de image x video.
+				$main.children('.thumb').each(function() {
+
+					var	$this = $(this),
+						$image = $this.find('.image'), $image_img = $image.children('img'),
+						x;
+
+					// No image? Bail.
+						if ($image.length == 0)
+							return;
+
+					// Image.
+					// This sets the background of the "image" <span> to the image pointed to by its child
+					// <img> (which is then hidden). Gives us way more flexibility.
+
+						// Set background.
+							$image.css('background-image', 'url(' + $image_img.attr('src') + ')');
+
+						// Set background position.
+							if (x = $image_img.data('position'))
+								$image.css('background-position', x);
+
+						// Hide original img.
+							$image_img.hide();
+
+					// Hack: IE<11 doesn't support pointer-events, which means clicks to our image never
+					// land as they're blocked by the thumbnail's caption overlay gradient. This just forces
+					// the click through to the image.
+						if (skel.vars.IEVersion < 11)
+							$this
+								.css('cursor', 'pointer')
+								.on('click', function() {
+									$image.trigger('click');
+								});
+
+				});
+
+			// Poptrox.
+				$main.poptrox({
+					baseZIndex: 20000,
+					caption: function($a) {
+
+						var s = '';
+
+						$a.nextAll().each(function() {
+							s += this.outerHTML;
+						});
+
+						return s;
+
+					},
+					fadeSpeed: 300,
+					onPopupClose: function() { $body.removeClass('modal-active'); },
+					onPopupOpen: function() { $body.addClass('modal-active'); },
+					overlayOpacity: 0,
+					popupCloserText: '',
+					popupHeight: 150,
+					popupLoaderText: '',
+					popupSpeed: 300,
+					popupWidth: 150,
+					selector: '.thumb > a.image',
+					usePopupCaption: true,
+					usePopupCloser: true,
+					usePopupDefaultStyling: false,
+					usePopupForceClose: true,
+					usePopupLoader: true,
+					usePopupNav: true,
+					windowMargin: 50
+				});
+
+				// Hack: Set margins to 0 when 'xsmall' activates.
+					skel
+						.on('-xsmall', function() {
+							$main[0]._poptrox.windowMargin = 50;
+						})
+						.on('+xsmall', function() {
+							$main[0]._poptrox.windowMargin = 0;
+						});
+
+	});
+
+})(jQuery);
