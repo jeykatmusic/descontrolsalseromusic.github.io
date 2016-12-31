@@ -10,7 +10,7 @@
 		padding: 0 0 _size(header) 0;
 	}
 
-	#header {
+#header {
 		@include vendor('transform', 'translateY(0)');
 		@include vendor('transition', 'transform #{_duration(header)} ease');
 		-moz-user-select: none;
@@ -26,6 +26,7 @@
 		user-select: none;
 		width: 100%;
 		z-index: _misc(z-index-base) + 2;
+        
 
 		body.loading & {
 			@include vendor('transform', 'translateY(#{_size(header)})');

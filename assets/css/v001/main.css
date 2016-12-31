@@ -2,9 +2,9 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
 
 /*
-	VENESTIMUSIC by @nelsonandradeIT
+    VENESTIMUSIC by @nelsonandradeIT
 	nelsonandrade.co | @nelsonandradeit
-	Free for personal and commercial use under the CCA 3.0 license (nelsonandrade.co/legal)
+	Free for personal and commercial use under the CCA 3.0 license (nelsonandrade.co/license)
 */
 
 /* Reset */
@@ -13,7 +13,7 @@
 		margin: 0;
 		padding: 0;
 		border: 0;
-		font-size: 100%;
+    	font-size: 100%;
 		font: inherit;
 		vertical-align: baseline;
 	}
@@ -137,11 +137,10 @@
 		}
 
 	}
-
-/* COLOR DE FONDO DE LA PÁGINA */
+/* COLOR DE FONDO DE LA PAGINA */
 
 	body {
-		background: #ffffff;
+		background: #000000;
 	}
 
 		body.loading *, body.loading *:before, body.loading *:after {
@@ -169,8 +168,8 @@
 /* Type CAMBIA EL COLOR DEL TEXTO ¿Seguirás otro año más tirando el dinero en estrategías y artistas que no te traen clientes en tu negocio? Vamos escribenos respondemos Fulltime!. */
 
 	body, input, select, textarea {
-		color: #a0a0a1;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		color: #c4302b;
+		font-family: "lato", sans-serif;
 		font-size: 15pt;
 		font-weight: 300;
 		letter-spacing: 0.025em;
@@ -191,7 +190,7 @@
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #34a58e;
+		color: rgba(31,34,36,0);
 		text-decoration: none;
 	}
 
@@ -199,13 +198,13 @@
 			border-bottom-color: transparent;
 
 /* COLOR DE LOS ICONOS DE LAS REDES AL SER TOCADOS Y COLOR DEL TEXTO WHATSAPP */
-
-			color: #505050 !important;
+            
+			color: #ffffff !important;
 		}
 
 	strong, b {
-		color: #ffffff;
-		font-weight: 300;
+		color: #000000; 
+		font-weight: 500;
 	}
 
 	em, i {
@@ -215,11 +214,10 @@
 	p {
 		margin: 0 0 2em 0;
 	}
-
-/* COLOR DEL TEXTO BIO - CONOCE MÁS DE SU HISTORIA - CUENTAME ALGO */
+/* COLOR DEL TEXTO BIO - CONOCE MAS DE SU HISTORIA - CUENTAME ALGO */
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #000000;
+		color: #ffffff;
 		font-weight: 300;
 		letter-spacing: 0.1em;
 		line-height: 1.5;
@@ -293,15 +291,15 @@
 	}
 
 	blockquote {
-		border-left: 4px #36383c;
+		border-left: 4px rgba(54, 56, 60, 0.05);
 		font-style: italic;
 		margin: 0 0 2em 0;
 		padding: 0.5em 0 0.5em 2em;
 	}
 
 	code {
-		background: #34363b;
-		border: solid 1px #36383c;
+		background: #e50000;
+		border: solid 1px #ffffff;
 		font-family: "Courier New", monospace;
 		font-size: 0.9em;
 		margin: 0 0.25em;
@@ -324,7 +322,7 @@
 
 	hr {
 		border: 0;
-		border-bottom: solid 1px #36383c;
+		border-bottom: solid 1px #ffffff;
 		margin: 2em 0;
 	}
 
@@ -362,14 +360,14 @@
 		background-color: transparent;
 		border: 0;
 		border-radius: 0;
-        
+
 /* CAMBIA EL COLOR BORDE ICONO CANCELAR MENSAJE DE LA CAJA */
 
-		box-shadow: inset 0 0 0 2px #505050;
-
+		box-shadow: inset 0 0 0 2px #9d9797;
+        
 /* COLOR TEXTO BOTONES CANCELAR MENSAJE DE LA CAJA SEND - RESET */
 
-		color: #505050 !important;
+		color: #ffffff !important;
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.9em;
@@ -389,8 +387,8 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			box-shadow: inset 0 0 0 2px #101010;
-			color: #36383c !important;
+			box-shadow: inset 0 0 0 2px #ffffff;
+			color: #000000 !important;
 		}
 
 			input[type="submit"]:hover:active,
@@ -398,8 +396,8 @@
 			input[type="button"]:hover:active,
 			button:hover:active,
 			.button:hover:active {
-				background-color: rgba(52, 165, 142, 0.15);
-				color: #000000 !important;
+				background-color: #9f9898;
+				color: #ffffff !important;
 			}
 
 		input[type="submit"].icon,
@@ -448,11 +446,11 @@
 		input[type="reset"].special,
 		input[type="button"].special,
 		button.special,
-		.button.special {
+		.button.special 
 
-/* TRANSPARENCIA COLOR RELLENO BOTÓN ENVIAR O Q */
-
-            background-color: #000000;
+/* TRANSPARENCIA COLOR RELLENO BOTON ENVIAR O Q */
+{
+			background-color: #626262;
 			box-shadow: none;
 		}
 
@@ -460,15 +458,16 @@
 			input[type="reset"].special:hover,
 			input[type="button"].special:hover,
 			button.special:hover,
-			.button.special:hover {
+			.button.special:hover
 
-/* COLOR NEGRO RELLENO BOTÓN ENVIAR AL ESTAR SOBRE EL */
+/* COLOR NEGRO RELLENO BOTON ENVIAR LA ESTAR SOBRE EL */
+{
+				background-color: #ffffff;
+				
+    
+    /* COLOR BLANCO DEL TEXTO BOTON ENVIAR LA ESTAR SOBRE EL */
 
-                background-color: #505050;
-
-/* COLOR BLANCO DEL TEXTO BOTÓN ENVIAR AL ESTAR SOBRE EL */
-
-				color: #ffffff !important;
+    color: #000000 !important;
 			}
 
 				input[type="submit"].special:hover:active,
@@ -476,7 +475,7 @@
 				input[type="button"].special:hover:active,
 				button.special:hover:active,
 				.button.special:hover:active {
-					background-color: #287e6d;
+					background-color: #000000;
 				}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
@@ -553,13 +552,13 @@
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-
-/* COLOR BLANCO DEL TEXTO BOTÓN ENVIAR AL ESTAR SOBRE EL */
-
+    
+        /* COLOR DE FONDO Y DEL BORDE DEL RECUADRO CONTENIDO */
+        
 		background: #000000;
-		border: 0;
-		border-radius: 0;
-		color: #a0a0a1;
+		border: 18;
+		border-radius: 5;
+		color: #ffffff;
 		display: block;
 		outline: 0;
 		padding: 0 1em;
@@ -586,10 +585,7 @@
 		input[type="url"]:focus,
 		select:focus,
 		textarea:focus {
-
-/* BORDE CAJA DE CONTACTO */
-            
-			box-shadow: inset 0 0 0 2px #505050;
+			box-shadow: inset 0 0 0 2px #000000;
 		}
 
 	.select-wrapper {
@@ -608,7 +604,7 @@
 		}
 
 		.select-wrapper:before {
-			color: #36383c;
+			color: #000000;
 			content: '\f078';
 			display: block;
 			height: 2.75em;
@@ -656,7 +652,7 @@
 		input[type="checkbox"] + label,
 		input[type="radio"] + label {
 			text-decoration: none;
-			color: #a0a0a1;
+			color: #000000;
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1em;
@@ -678,7 +674,7 @@
 
 			input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
-				background: #34363b;
+				background: #ffffff;
 				content: '';
 				display: inline-block;
 				height: 1.65em;
@@ -692,15 +688,15 @@
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: #34a58e;
-			border-color: #b91010;
-			color: #ffffff;
+			background: #ffffff;
+			border-color: #ffffff;
+			color: #000000;
 			content: '\f00c';
 		}
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			box-shadow: 0 0 0 2px #34a58e;
+			box-shadow: 0 0 0 2px #000000;
 		}
 
 	input[type="radio"] + label:before {
@@ -708,27 +704,27 @@
 	}
 
 	::-webkit-input-placeholder {
-		color: #707071 !important;
+		color: #ffffff !important;
 		opacity: 1.0;
 	}
 
 	:-moz-placeholder {
-		color: #707071 !important;
+		color: #ffffff !important;
 		opacity: 1.0;
 	}
 
 	::-moz-placeholder {
-		color: #707071 !important;
+		color: #ffffff !important;
 		opacity: 1.0;
 	}
 
 	:-ms-input-placeholder {
-		color: #707071 !important;
+		color: #ffffff !important;
 		opacity: 1.0;
 	}
 
 	.formerize-placeholder {
-		color: #707071 !important;
+		color: #ffffff !important;
 		opacity: 1.0;
 	}
 
@@ -781,7 +777,7 @@
 		}
 
 			ul.alt li {
-				border-top: solid 1px #36383c;
+				border-top: solid 1px #ffffff;
 				padding: 0.5em 0;
 			}
 
@@ -808,7 +804,7 @@
 /*COLOR ICONOS REDES SOCIALES*/
 
 				ul.icons li .icon {
-					color: #000000;
+					color: #716e6e;
 				}
 
 					ul.icons li .icon:before {
@@ -945,13 +941,13 @@
 	}
 
 		table tbody tr {
-			border: solid 1px #36383c;
+			border: solid 1px #000000;
 			border-left: 0;
 			border-right: 0;
 		}
 
 			table tbody tr:nth-child(2n + 1) {
-				background-color: #34363b;
+				background-color: #ffffff;
 			}
 
 		table td {
@@ -959,7 +955,7 @@
 		}
 
 		table th {
-			color: #ffffff;
+			color: #716e6e;
 			font-size: 0.9em;
 			font-weight: 300;
 			padding: 0 0.75em 0.75em 0.75em;
@@ -967,11 +963,11 @@
 		}
 
 		table thead {
-			border-bottom: solid 2px #36383c;
+			border-bottom: solid 2px #ffffff;
 		}
 
 		table tfoot {
-			border-top: solid 2px #36383c;
+			border-top: solid 2px #ffffff;
 		}
 
 		table.alt {
@@ -979,7 +975,7 @@
 		}
 
 			table.alt tbody tr td {
-				border: solid 1px #36383c;
+				border: solid 1px #ffffff;
 				border-left-width: 0;
 				border-top-width: 0;
 			}
@@ -1014,10 +1010,9 @@
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
 
-/* FONDO INFORMACIÓN DEL SITIO rgba(36, 38, 41, 0.975); */
-
-		background: #ffffff;
-		bottom: 4em;
+/* FONDO INFORMACION DEL SITIO rgba(36, 38, 41, 0.975); */
+		background: #000000;
+		bottom: 4.3em;
 		left: 0;
 		max-height: calc(80vh - 4em);
 		overflow-y: auto;
@@ -1139,8 +1134,8 @@
 	}
 
 	.poptrox-popup {
-		background: rgba(31, 34, 36, 0.925);
-		box-shadow: 0 1em 3em 0.5em rgba(0, 0, 0, 0.25);
+		background: rgba(255, 255, 255, 0.93);
+		box-shadow: 0 1em 3em 0.5em rgba(255, 255, 255, 0.25);
 		cursor: default;
 	}
 
@@ -1149,10 +1144,10 @@
 			-webkit-transition: opacity 0.2s ease-in-out;
 			-ms-transition: opacity 0.2s ease-in-out;
 			transition: opacity 0.2s ease-in-out;
-			background-image: -moz-linear-gradient(to left, rgba(31,34,36,0.35), rgba(31,34,36,0) 10em, rgba(31,34,36,0)), -moz-linear-gradient(to right, rgba(31,34,36,0.35), rgba(31,34,36,0) 10em, rgba(31,34,36,0));
+			background-image: -moz-linear-gradient(to left, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0) 10em, rgba(31,34,36,0)), -moz-linear-gradient(to right, rgba(31,34,36,0.35), rgba(255, 255, 255, 0) 10em, rgba(31,34,36,0));
 			background-image: -webkit-linear-gradient(to left, rgba(31,34,36,0.35), rgba(31,34,36,0) 10em, rgba(31,34,36,0)), -webkit-linear-gradient(to right, rgba(31,34,36,0.35), rgba(31,34,36,0) 10em, rgba(31,34,36,0));
 			background-image: -ms-linear-gradient(to left, rgba(31,34,36,0.35), rgba(31,34,36,0) 10em, rgba(31,34,36,0)), -ms-linear-gradient(to right, rgba(31,34,36,0.35), rgba(31,34,36,0) 10em, rgba(31,34,36,0));
-			background-image: linear-gradient(to left, rgba(31,34,36,0.35), rgba(31,34,36,0) 10em, rgba(31,34,36,0)), linear-gradient(to right, rgba(31,34,36,0.35), rgba(31,34,36,0) 10em, rgba(31,34,36,0));
+			background-image: linear-gradient(to left, rgba(31,34,36,0.35), rgba(31,34,36,0) 10em, rgba(31,34,36,0)), linear-gradient(to right, rgba(255, 255, 255, 0.35), rgba(31,34,36,0) 10em, rgba(31,34,36,0));
 			content: '';
 			display: block;
 			height: 100%;
@@ -1216,7 +1211,7 @@
 
 		.poptrox-popup .caption {
 			padding: 2em 2em 0.1em 2em ;
-			background-image: -moz-linear-gradient(to top, rgba(16,16,16,0.45) 25%, rgba(16,16,16,0) 100%);
+			background-image: -moz-linear-gradient(to top, rgba(255, 255, 255, 0.45) 25%, rgba(16,16,16,0) 100%);
 			background-image: -webkit-linear-gradient(to top, rgba(16,16,16,0.45) 25%, rgba(16,16,16,0) 100%);
 			background-image: -ms-linear-gradient(to top, rgba(16,16,16,0.45) 25%, rgba(16,16,16,0) 100%);
 			background-image: linear-gradient(to top, rgba(16,16,16,0.45) 25%, rgba(16,16,16,0) 100%);
@@ -1226,15 +1221,15 @@
 			position: absolute;
 			text-align: left;
 			width: 100%;
-			z-index: 2;
+			z-index: 1;
 		}
 
 			.poptrox-popup .caption h2, .poptrox-popup .caption h3, .poptrox-popup .caption h4, .poptrox-popup .caption h5, .poptrox-popup .caption h6 {
-				margin: 0 0 0.5em 0;
+				margin: 1 0 0.0em 0;
 			}
 
 			.poptrox-popup .caption p {
-				color: #ffffff;
+				color: #8d8d8d;
 			}
 
 		.poptrox-popup .loader {
@@ -1331,7 +1326,7 @@
 			-webkit-transition: opacity 0.5s ease, visibility 0.5s;
 			-ms-transition: opacity 0.5s ease, visibility 0.5s;
 			transition: opacity 0.5s ease, visibility 0.5s;
-			background: rgba(36, 38, 41, 0.5);
+			background: rgba(255, 255, 255, 0.5);
 			content: '';
 			display: block;
 			height: 100%;
@@ -1345,7 +1340,7 @@
 		}
 
 			body.ie #wrapper:after {
-				background: rgba(36, 38, 41, 0.8);
+				background: rgba(255, 255, 255, 0.8);
 			}
 
 		body.modal-active #wrapper {
@@ -1414,7 +1409,7 @@
 /* Header */
 
 	body {
-		padding: 0 0 4em 0;
+		padding: 0 0 -4em 0;
 	}
 
 	#header {
@@ -1428,24 +1423,23 @@
 		transition: transform 1s ease;
 		-moz-user-select: none;
 		-ms-user-select: none;
-        -webkit-user-select: none;
+		-webkit-user-select: none;
 
-/* COLOR BARRA WHATSAPP CUBRE EL MENÚ */
-
-		background: #ffffff;
-		bottom: -1em;
-		height: 5em;
-		left: 0;
-		line-height: 4em;
-		padding: 0 1.5em;
-		position: fixed;
-		user-select: none;
-
-/* POSICIÓN CONTENIDO SOUNDCLOUD */
-
-		width: 100%;
-		z-index: 10002;
+/* COLOR BARRA WHATSAPP CUBRE EL MENU */
         
+		background: #000000;
+		bottom: 20%; -1em;
+		height: 4em;
+		left: 1em;
+		line-height: 4em;
+		padding: -4em;
+		position: relative;
+		user-select: none;
+        
+/* POSICION CONTENIDO SONDCLUB */
+
+		width:  100%;
+		z-index: 1001;
 	}
 
 		body.loading #header {
@@ -1456,15 +1450,15 @@
 		}
 
 		#header h1 {
-
-/* COLOR LETRA WHATSAPP CUBRE EL MENÚ */
-
-			color: #000000;
-			display: inline-block;
-			font-size: 1em;
-			line-height: 1;
             
-/* MARGEN BARRA SOUNDCLOUD <h1> */
+/* COLOR LETRA WHATSAPP CUBRE EL MENU */
+
+			color: #ffffff;
+			display: inline-block;
+			font-size: 0 0 -1em;
+			line-height: 0;
+
+/* MARGEN BARRA SOUNCLOUD <h1> */
 
 			margin: 0;
 			vertical-align: middle;
@@ -1473,7 +1467,6 @@
 			#header h1 a {
 				border: 0;
 				color: inherit;
-                
 			}
 
 				#header h1 a:hover {
@@ -1497,52 +1490,55 @@
 					padding: 0;
 				}
 
-					#header nav > ul > li a {
-						-moz-transition: background-color 0.5s ease;
-						-webkit-transition: background-color 0.5s ease;
-						-ms-transition: background-color 0.5s ease;
-						transition: background-color 0.5s ease;
-						border: 0;
-                        
-/* COLOR LETRA EL MENÚ */
-                        
-						color: #000000;
-						display: inline-block;
-						letter-spacing: 0.1em;
-                        
-/* MARGEN BARRA MENÚ HAMBURGUESA PADDING 12  */  
+#header nav > ul > li a {
+		-moz-transition: background-color 0.5s ease;
+		-webkit-transition: background-color 0.5s ease;
+		-ms-transition: background-color 0.5s ease;
+		transition: background-color 0.5s ease;
+		border: 0;
 
-						padding: 0 1.65em;
-						text-transform: uppercase;
+/* COLOR LETRA EL MENU */
+
+						color: #ffffff;
+						display: inline-block;
+						letter-spacing: o inherit;
+  
+/* MARGEN BARRA MENU HAMBURGUESA PADDING 12  */  
+						padding: 1em;
+                		text-transform: uppercase;
+                        
 					}
 
 						#header nav > ul > li a.icon:before {
                             
-/* COLOR ICONO JUNTO A LA LETRA EL MENÚ */
-
-							color: #000000;
+/* COLOR ICONO JUNTO A LA LETRA EL MENU */
+							color: #ffffff;
 							float: right;
-							margin-left: 0.75em;
+                            
+                            /* VENIR A CORREGIR*/
+                            margin-left: 1em;
+                            position: relative;
+                            
+							
 						}
 
 						#header nav > ul > li a:hover {
-            
-/* COLOR CUANDO TOCAN EL TEXTO DE BOTÓN MENU */
 
-							color: #000000 !important;
+    /* COLOR CUANDO TOCAN EL BOTON MENU */
+
+							color: rgba(31,34,36,0.35) !important;
 						}
 
+/* COLOR FONDO ICONO MENU HAMBURGUESA */
+
 						#header nav > ul > li a.active {
-
-/* COLOR FONDO ICONO MENÚ HAMBURGUESA */
-
-                            background-color: #505050;
+							background-color: #403838;
 						}
 
 	@media screen and (max-width: 736px) {
 
 		body {
-			padding: 4em 0 0 0;
+			padding: -1em 0 0 0;
 		}
 
 		#header {
@@ -1564,7 +1560,7 @@
 			}
 
 			#header h1 {
-				font-size: 0.9em;
+				font-size: 6.9em;
 			}
 
 			#header nav > ul > li a {
@@ -1609,7 +1605,7 @@
 
 			#main .thumb:after {
 				background-image: -moz-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
-				background-image: -webkit-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
+				background-image: -webkit-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(24, 124, 239, 0) 35%);
 				background-image: -ms-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
 				background-image: linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
 				-moz-pointer-events: none;
@@ -1679,7 +1675,7 @@
 		}
 
 			body.ie #main:after {
-				background: rgba(36, 38, 41, 0.55);
+				background: rgba(255, 255, 255, 0.55);
 			}
 
 		body.content-active #main {
@@ -2047,12 +2043,11 @@
 
 /* Footer Color manager wwww.nelsonandrade.co */
 
-
 	#footer .copyright {
-		color: #505051;
+		color: #ffffff;
 		font-size: 0.9em;
 	}
 
 		#footer .copyright a {
-			color: inherit;
+			color: #D4AF37;
 		}
